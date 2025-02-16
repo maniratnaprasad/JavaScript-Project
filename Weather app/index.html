@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="search">
+        <input type="text" placeholder="Enter the city name" />
+        <button><img src="./images/search.png" alt="search button" /></button>
+      </div>
+
+      <div class="Weather">
+        <img src="./images/rain.png" class="weather-icon" />
+        <h1 class="temp">22°c</h1>
+        <h2 class="city">Hyderabad</h2>
+      </div>
+      <div class="weather-details">
+        <div class="col">
+          <img src="./images/humidity.png" alt="" />
+          <div class="humidity">
+            <p class="humidrate">50%</p>
+            <p>Humidity</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <img src="./images/wind.png" />
+          <div class="speed">
+            <p class="speedrate">150km/h</p>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      { const url= "https://api.openweathermap.org/data/2.5/weather?units=metric&q=hyderabad";
+        
+         const apikey="602ab8ab1a7234b3aef2988c2602f527";
+
+
+         async function checkWeather(){
+          const responce =await fetch(url+`&appid=${apikey}`);
+
+          var data = await responce.json();
+          console.log(data);
+         }
+
+
+         checkWeather();
+
+      }
+    </script>
+  </body>
+</html>
