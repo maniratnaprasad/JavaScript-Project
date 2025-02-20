@@ -53,6 +53,15 @@
 
 /* content dix*/
 
+.weather-container{
+    display: none;
+}
+.error{
+    display: none;
+    text-align: center;
+    
+}
+
 .Weather h1{
     font-size: 40px;
     font-weight: 500px;
