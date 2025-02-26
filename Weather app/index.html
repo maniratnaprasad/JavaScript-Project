@@ -58,7 +58,7 @@
             document.querySelector(".weather-container").style.display = "none";
           } else {
             var data = await responce.json();
-            
+            console.log(data);
 
             document.querySelector(".city").innerHTML = data.name;
             document.querySelector(".temp").innerHTML =
@@ -81,15 +81,13 @@
             } else if (data.weather[0].main == "Mist") {
               weather_pic.scr = "images/mist.png";
             }
-            document.querySelector(".weather-container").style.display = "block";
+            document.querySelector(".weather-container").style.display =
+              "block";
             document.querySelector(".error").style.display = "none";
-
           }
         }
-        
 
         searchbutton.addEventListener("click", () => {
-          
           checkWeather(searchbox.value);
         });
       }
