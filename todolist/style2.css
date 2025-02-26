@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: balck;
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677,#4e085f);
+    padding: 1px;
+}
+
+.todolist{
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    /* border: 2px solid red; */
+    background: #edeef0;
+    border-radius: 10px;
+
+}
+
+
+
+ .todolist h2{
+    display: flex;
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+ }
+ .todolist h2 img{
+    width: 30px;
+    display: block;
+    height:auto;
+    margin-left: 10px;
+ }
+
+ 
+ .row{
+    background:#c5c6c9;
+    border-radius:30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-bottom: 10px;
+
+ }
+
+ input{
+    flex: 1;
+    padding: 3px;
+    border: none;
+    outline: 0;
+    background: transparent;
+    color: black;
+ }
+
+ .row button{
+    border:none;
+    outline: 0;
+    background-color: hsl(23, 89%, 49%);
+    padding: 10px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+
+ }
+
+
+ ul li{
+    list-style: none;
+    padding:5px 0 5px 50px;
+    /* border: 2px solid red; */
+    border-radius: 30px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+ }
+ ul li:hover{
+    list-style: none;
+    padding:5px 0 5px 50px;
+    background-color: rgb(157, 167, 167);
+    color:azure
+ }
+
+ ul li span{
+    position: absolute;
+    right: 30px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    text-align: center;
+
+ }
+ ul li span:hover{
+    background-color: hsl(23, 89%, 49%);
+
+ }
+
+ ul li::before{
+    content: "";
+    position: absolute;
+    left: 20px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(./images/unchecked-44.jpeg);
+    background-size: cover;
+    background-position: center;
+
+ }
+
+ ul li.Clicked{
+    text-decoration: line-through;
+    
+
+    
+ }
+
+
+ ul li.Clicked::before{
+
+    background-image: url(./images/Checkmark-2-128.webp);
+    
+ }
+
+
